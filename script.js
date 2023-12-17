@@ -11,6 +11,7 @@ function fetchStockPrice() {
 	fetch(url)
 		.then(response => response.json())
 		.then(data => {
+			print(data)
 			const price = data['Global Quote']['05. price'];
 			document.getElementById('stock-price').innerText = '$${parseFloat(price).toFixed(2)}';})
 		.catch(error => {
